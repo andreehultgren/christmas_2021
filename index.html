@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Riddle</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --bottom: translate(0px, 30vh);
+        --middle: translate(0px, 0px);
+        --top: translate(0px, -30vh);
+        --time: 8s;
+      }
+
+      #page-container {
+        display: none;
+      }
+
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+      }
+
+      #dot_main {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        border-radius: 100%;
+        animation: jumper var(--time) linear infinite;
+        animation-direction: reverse;
+      }
+
+      #dot_extra {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        translate: var(--middle);
+        border-radius: 100%;
+        animation: jumper_extra var(--time) linear infinite;
+        animation-direction: reverse;
+      }
+      #dot_starter {
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        animation: jumper_indicator var(--time) linear infinite;
+        animation-direction: reverse;
+      }
+
+      @keyframes jumper {
+        0% {
+          background-color: black;
+          transform: var(--top);
+        }
+        1% {
+          background-color: white;
+          transform: var(--top);
+        }
+        5% {
+          transform: var(--bottom);
+        }
+        10% {
+          transform: var(--bottom);
+          background-color: white;
+        }
+        11% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        15% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        16% {
+          background-color: white;
+          transform: var(--bottom);
+        }
+        20% {
+          transform: var(--top);
+        }
+        24% {
+          transform: var(--middle);
+        }
+        28% {
+          transform: var(--top);
+        }
+        32% {
+          transform: var(--bottom);
+          background-color: white;
+        }
+        33% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        35% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        36% {
+          background-color: white;
+          transform: var(--bottom);
+        }
+        40% {
+          transform: var(--top);
+        }
+        44% {
+          background-color: white;
+          transform: var(--bottom);
+        }
+        45% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        47% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        48% {
+          background-color: white;
+          transform: var(--bottom);
+        }
+        52% {
+          transform: var(--top);
+          background-color: white;
+        }
+        53% {
+          transform: var(--top);
+          background-color: black;
+        }
+        55% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        56% {
+          transform: var(--bottom);
+          background-color: white;
+        }
+        60% {
+          transform: var(--top);
+          background-color: white;
+        }
+        61% {
+          transform: var(--top);
+          background-color: black;
+        }
+        63% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        64% {
+          transform: var(--bottom);
+          background-color: white;
+        }
+        68% {
+          transform: var(--top);
+        }
+        72% {
+          transform: var(--middle);
+        }
+        76% {
+          transform: var(--top);
+        }
+        80% {
+          transform: var(--bottom);
+        }
+        84% {
+          transform: var(--bottom);
+          background-color: white;
+        }
+        85% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+        100% {
+          transform: var(--bottom);
+          background-color: black;
+        }
+      }
+
+      @keyframes jumper_extra {
+        0% {
+          background-color: black;
+        }
+        37% {
+          background-color: black;
+        }
+        38% {
+          background-color: white;
+        }
+        42% {
+          background-color: white;
+        }
+        43% {
+          background-color: black;
+        }
+        49% {
+          background-color: black;
+        }
+        50% {
+          background-color: white;
+        }
+        58% {
+          background-color: white;
+        }
+        59% {
+          background-color: black;
+        }
+        100% {
+          background-color: black;
+        }
+      }
+
+      @keyframes jumper_indicator {
+        0% {
+          background-color: black;
+        }
+        95% {
+          background-color: black;
+        }
+        96% {
+          background-color: white;
+        }
+        100% {
+          background-color: white;
+        }
+      }
+    </style>
+    <div id="dot_main"></div>
+    <div id="dot_extra"></div>
+    <div id="dot_starter"></div>
+  </body>
+</html>
